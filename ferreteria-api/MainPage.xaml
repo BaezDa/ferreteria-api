@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="ferreteria_api.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <ScrollView>
+        <StackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="400" />
+                </Grid.RowDefinitions>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="100" />
+                        <RowDefinition Height="200" />
+
+                    </Grid.RowDefinitions>
+
+                    <Entry
+                        x:Name="lblBuscar"
+                        Grid.Row="0"
+                        Margin="20,20,20,20"
+                        Placeholder="ID"
+                        VerticalOptions="End" />
+                    <StackLayout Grid.Row="1" Padding="20">
+                        <Button
+                            Clicked="Button_Clicked"
+                            Text="Buscar"
+                            TextTransform="None" />
+                    </StackLayout>
+                </Grid>
+
+                <StackLayout
+                    Grid.Row="0"
+                    Padding="20,20,20,50"
+                    VerticalOptions="End">
+                    <Label
+                        x:Name="lblNombre"
+                        FontAttributes="Bold"
+                        FontSize="25"
+                        Text=""
+                        VerticalOptions="Start" />
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Label
+                            Grid.Row="0"
+                            FontAttributes="Bold"
+                            FontSize="15"
+                            Text="ID"
+                            TextColor="Silver"
+                            TextTransform="Uppercase"
+                            VerticalOptions="End" />
+                        <Label
+                            x:Name="lblIdProducto"
+                            Grid.Row="0"
+                            Grid.ColumnSpan="2"
+                            Margin="20,0,0,0"
+                            FontAttributes="Bold"
+                            FontSize="15"
+                            HorizontalOptions="Start"
+                            Text=""
+                            TextColor="Silver"
+                            TextTransform="Uppercase" />
+                    </Grid>
+
+                </StackLayout>
+                <!--<Label
+                    Grid.Row="0"
+                    Padding="20,20,20,50"
+                    VerticalOptions="End">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span
+                                FontAttributes="Bold"
+                                FontSize="25"
+                                ForegroundColor="Black"
+                                Text="{Binding Nombre, StringFormat=&#10}" />
+                            <Span
+                                FontSize="10"
+                                ForegroundColor="Black"
+                                Text="{Binding Id} &#10;" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>-->
+            </Grid>
+
+            <Frame
+                Margin="0,-50,0,0"
+                BackgroundColor="#fbfaff"
+                CornerRadius="15"
+                HasShadow="False"
+                HeightRequest="20" />
+
+            <Grid Margin="30,-20,30,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+
+
+                <Label
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Margin="0,20,0,0"
+                    FontSize="25"
+                    Text="Descripción"
+                    TextColor="Silver" />
+                <Label
+                    x:Name="lblDescripcion"
+                    Grid.Row="1"
+                    Grid.ColumnSpan="2"
+                    Margin="0,20,0,0"
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    Text="" />
+
+                <Label
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Margin="0,20,0,0"
+                    FontSize="25"
+                    Text="Cantidad disponible"
+                    TextColor="Silver" />
+                <Label
+                    x:Name="lblCantidadDisponible"
+                    Grid.Row="3"
+                    Grid.ColumnSpan="2"
+                    Margin="0,20,0,0"
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    Text="" />
+                <Label
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Margin="0,20,0,0"
+                    FontSize="25"
+                    Text="Precio unitario"
+                    TextColor="Silver" />
+                <Label
+                    x:Name="lblPrecioUnitario"
+                    Grid.Row="5"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Margin="0,20,0,0"
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    Text="" />
+                <Label
+                    Grid.Row="6"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Margin="0,20,0,0"
+                    FontSize="25"
+                    Text="Precio de venta"
+                    TextColor="Silver" />
+                <Label
+                    x:Name="lblPrecioVenta"
+                    Grid.Row="7"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Margin="0,20,0,0"
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    Text="" />
+
+                <Label
+                    Grid.Row="8"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Margin="0,20,0,0"
+                    FontSize="25"
+                    Text="Marca"
+                    TextColor="Silver" />
+                <Label
+                    x:Name="lblMarca"
+                    Grid.Row="9"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Margin="0,20,0,0"
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    Text="" />
+
+                <Label
+                    Grid.Row="10"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Margin="0,20,0,0"
+                    FontSize="25"
+                    Text="Categoria"
+                    TextColor="Silver" />
+                <Label
+                    x:Name="lblCategoria"
+                    Grid.Row="11"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Margin="0,20,0,0"
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    Text="" />
+
+
+
+                <!--<Label
+                    Grid.Row="3"
+                    Grid.ColumnSpan="2"
+                    Margin="0,20,0,0"
+                    FontSize="25"
+                    Text="{Binding Nombre}"
+                    TextColor="{Binding Nombre}" />
+                <Label Grid.Row="4" Text="{Binding Nombre}" />-->
+
+                <!--<StackLayout
+                    Grid.Row="5"
+                    Grid.ColumnSpan="2"
+                    Orientation="Horizontal">
+                    <Entry
+                        HorizontalOptions="StartAndExpand"
+                        Keyboard="Numeric"
+                        Placeholder="Cantidad"
+                        Text="{Binding Retiro, Mode=TwoWay}" />
+                    <Button
+                        Margin="0,0,0,0"
+                        BackgroundColor="#ff0000"
+                        Command="{Binding RetirarComando}"
+                        CornerRadius="25"
+                        FontAttributes="Bold"
+                        HeightRequest="40"
+                        Text="Retirar"
+                        TextColor="White"
+                        VerticalOptions="Center"
+                        WidthRequest="130" />
+                </StackLayout>
+
+                <Label Grid.Row="6" Text="{Binding MensajeRetiro}" />
+
+                <Label
+                    Grid.Row="7"
+                    Grid.Column="0"
+                    Margin="0,20,0,0"
+                    Text="Movimientos"
+                    TextColor="Silver" />-->
+
+
+
+            </Grid>
+
+        </StackLayout>
+
+    </ScrollView>
+
+
+
+</ContentPage>
